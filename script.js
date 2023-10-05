@@ -18,7 +18,14 @@ function showdata(rs) {
     cont.innerHTML = "";
     let div = document.createElement("div");
 
-    div.innerHTML = `<h1>${rs.Title}</h1>`;
+    div.innerHTML = `<h1>Film: ${rs.data.Title}</h1>
+    <h3>Actor: ${rs.data.Actors}</h3>
+    <h3>Director: ${rs.data.Director}</h3>
+    <h3>Year: ${rs.data.Year}</h3>
+    <h3>Language: ${rs.data.Language}</h3>
+    <img src="${rs.data.Poster}">
+
+    `;
     cont.append(div);
 }
 
