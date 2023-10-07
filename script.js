@@ -1,4 +1,4 @@
-let form = document.querySelector(".input")
+let form = document.querySelector(".search-bar")
 let cont = document.querySelector(".container");
 
 async function getdata(d) {
