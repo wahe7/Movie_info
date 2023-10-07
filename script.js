@@ -1,5 +1,6 @@
 let form = document.querySelector(".search-bar")
-let cont = document.querySelector(".container");
+// let cont = document.querySelector(".container");
+let sh=document.querySelector(".show");
 
 async function getdata(d) {
 
@@ -20,7 +21,7 @@ async function getdata(d) {
 }
 
 function showdata(rs) {
-    cont.innerHTML = "";
+    sh.innerHTML = "";
     let div = document.createElement("div");
 
     div.innerHTML = `<h1>Film: ${rs.data.Title}</h1>
@@ -29,9 +30,9 @@ function showdata(rs) {
     <h3>Year: ${rs.data.Year}</h3>
     <h3>Language: ${rs.data.Language}</h3>
     <img src="${rs.data.Poster}">
-
+   
     `;
-    cont.append(div);
+    sh.append(div);
 }
 
 form.addEventListener("submit", function (ev) {
